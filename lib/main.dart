@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:test/screens/home-screen.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("learn flutter step by step"),
-        backgroundColor: Colors.blue,
-      ),
-      backgroundColor: Colors.blue[999],
-      body: Center(
-        child: Image(
-          image: AssetImage("images/imag.jpg"),
-        ),
-      )
-    ),
-  ));
+  runApp(MyApp());
+}
 
-  // the first project
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home()
+    );
+  }
 }
